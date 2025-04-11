@@ -14,29 +14,29 @@ public class Main {
         int givenCommand = scanner.nextInt();
 
 
-        float result = 0;
+      
         switch (givenCommand) {
             case 1:
                 System.out.println("--You have selected Financial Calculator 1: This will help you calculate the monthly payment for what your load would be--");
 
                 System.out.println("Please enter the load amount: ");
-                float principal = scanner.nextFloat();
+                double principal = scanner.nextDouble();
 
                 System.out.println("Please enter the interest rate amount(format e.g., 7.625% = 0.07625): ");
-                float annualInterestRate = scanner.nextFloat();
+                double annualInterestRate = scanner.nextDouble();
 
                 System.out.println("Please enter the length of the Loan(years): ");
-                float years = scanner.nextFloat();
+                double years = scanner.nextDouble();
 
-                double monthlyPayment = 0;
-                float totalInterest = 0;
+                double monthlyPayment ;
+                double totalInterest ;
                 int numberOfMonths = 12;
-                float numberOfMonthlyPayments = 12 * years;
-                float monthlyInterestRate = annualInterestRate / 12;
+                double numberOfMonthlyPayments = 12 * years;
+                double monthlyInterestRate = annualInterestRate / 12;
 
                 //calculations
-                monthlyPayment = principal * Math.pow(((monthlyInterestRate*(1 + monthlyInterestRate))),numberOfMonthlyPayments) / (Math.pow((1+monthlyInterestRate),numberOfMonthlyPayments)-1);
-                totalInterest = (monthlyInterestRate * numberOfMonthlyPayments) - principal;
+                monthlyPayment = principal * (monthlyInterestRate*Math.pow((((1 + monthlyInterestRate))),numberOfMonthlyPayments)) / (Math.pow((1+monthlyInterestRate),numberOfMonthlyPayments)-1);
+                totalInterest = (monthlyPayment * numberOfMonthlyPayments) - principal;
 
                 System.out.println("Your monthly Payment is: " + monthlyPayment);
                 System.out.println("Your total interest paid would be: " + totalInterest);
