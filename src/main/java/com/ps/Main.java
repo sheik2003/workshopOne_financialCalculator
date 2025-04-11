@@ -30,7 +30,6 @@ public class Main {
 
                 double monthlyPayment ;
                 double totalInterest ;
-                int numberOfMonths = 12;
                 double numberOfMonthlyPayments = 12 * years;
                 double monthlyInterestRate = annualInterestRate / 12;
 
