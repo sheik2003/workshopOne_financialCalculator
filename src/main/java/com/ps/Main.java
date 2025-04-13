@@ -18,7 +18,8 @@ public class Main {
 
         switch (givenCommand) {
             case 1:
-                System.out.println("--You have selected Financial Calculator 1\uD83D\uDCC9 : This will help you calculate the monthly payment for what your load would be--");
+                System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("You have selected Financial Calculator 1\uD83D\uDCC9 : This will help you calculate the monthly payment for what your load would be--");
 
                 System.out.println("Please enter the loan amount: ");
                 double principal = scanner.nextDouble();
@@ -42,7 +43,8 @@ public class Main {
                 System.out.println("Your total interest paid would be: " + totalInterest);
                 break;
         case 2:
-            System.out.println("--You have selected Financial Calculator 2\uD83D\uDCC9 : This will help you calculate the future value of a one-time deposit assuming compound interest--");
+            System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.println("You have selected Financial Calculator 2\uD83D\uDCC9 : This will help you calculate the future value of a one-time deposit assuming compound interest");
             System.out.println("Please enter the deposit amount: ");
             double principalC2 = scanner.nextDouble();
 
@@ -62,7 +64,8 @@ public class Main {
             System.out.println("Total interest earned is: " + totalInterestC2);
             break;
         case 3:
-            System.out.println("--You have selected Financial Calculator 3\uD83E\uDDFE: This will help you determines the present value of an ordinary annuity--");
+            System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.println("You have selected Financial Calculator 3\uD83E\uDDFE: This will help you determines the present value of an ordinary annuity");
             System.out.println("Please enter the monthly payout amount: ");
             double monthlyPayoutAmount = scanner.nextDouble();
 
@@ -76,12 +79,13 @@ public class Main {
 
             presentValue = monthlyPayoutAmount * ((1-(Math.pow(1+(expectedInterestRate/12),-yearsC3*12)))/((expectedInterestRate/12)));
 
-            System.out.println("The the present value of that annuity: " + presentValue);
+            System.out.println("Then the present value of that annuity would be: " + presentValue);
 
             break;
 
             case 4:
-                System.out.println("--You have selected Financial Calculator 4\uD83D\uDCB9: This will help you determines how much your investment in the S&P500 would be if you invested in it a certain year (not adjusted for inflation and assumes average return of 10%)--");
+                System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("You have selected Financial Calculator 4\uD83D\uDCB9: This will help you determines how much your investment in the S&P500 would be if you invested in it a certain year (not adjusted for inflation and assumes average return of 10%)");
                 System.out.println("Please enter the your investment amount: ");
                 double investedAmount = scanner.nextDouble();
 
