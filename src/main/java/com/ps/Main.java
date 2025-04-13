@@ -60,18 +60,26 @@ public class Main {
             System.out.println("The future value is: " + futureValue);
             System.out.println("Total interest earned is: " + totalInterestC2);
             break;
-//        case 3:
-//            result = firstNum * secondNum;
-//            break;
-//        case 4:
-//            if(secondNum == 0){
-//                System.out.println("You cannot divide by zero");
-//                result = 0;
-//            }else{
-//                result = firstNum / secondNum;}
-//            break;
-//        default:
-//            System.out.println("INVALID COMMAND try again");
+        case 3:
+            System.out.println("--You have selected Financial Calculator 2: This will help you calculate the future value of a one-time deposit assuming compound interest--");
+            System.out.println("Please enter the deposit amount: ");
+            double principalC2 = scanner.nextDouble();
+
+            System.out.println("Please enter the interest rate amount(format e.g., 7.625% = 0.07625): ");
+            double annualInterestRateC2 = scanner.nextDouble();
+
+            System.out.println("Please enter how long the deposit will be for(years): ");
+            double yearsC2 = scanner.nextDouble();
+
+            double futureValue;
+            double totalInterestC2;
+            futureValue = principalC2 * Math.pow(1+(annualInterestRateC2/365),365 * yearsC2);
+
+            totalInterestC2 = futureValue - principalC2;
+
+            System.out.println("The future value is: " + futureValue);
+            System.out.println("Total interest earned is: " + totalInterestC2);
+            break;
 
 
         }
