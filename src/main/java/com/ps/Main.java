@@ -73,7 +73,7 @@ public class Main {
 
             double presentValue;
 
-            presentValue = monthlyPayoutAmount * ((1-(Math.pow(1+expectedInterestRate,-yearsC3*12)))/(expectedInterestRate/12));
+            presentValue = monthlyPayoutAmount * ((1-(Math.pow(1+(expectedInterestRate/12),-yearsC3*12)))/((expectedInterestRate/12)));
 
             System.out.println("The the present value of that annuity: " + presentValue);
 
@@ -84,3 +84,4 @@ public class Main {
 
     }
 }
+
