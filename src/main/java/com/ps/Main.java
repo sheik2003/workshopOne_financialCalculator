@@ -61,24 +61,22 @@ public class Main {
             System.out.println("Total interest earned is: " + totalInterestC2);
             break;
         case 3:
-            System.out.println("--You have selected Financial Calculator 2: This will help you calculate the future value of a one-time deposit assuming compound interest--");
-            System.out.println("Please enter the deposit amount: ");
-            double principalC2 = scanner.nextDouble();
+            System.out.println("--You have selected Financial Calculator 3: This will help you determines the present value of an ordinary annuity--");
+            System.out.println("Please enter the monthly payout amount: ");
+            double monthlyPayoutAmount = scanner.nextDouble();
 
-            System.out.println("Please enter the interest rate amount(format e.g., 7.625% = 0.07625): ");
-            double annualInterestRateC2 = scanner.nextDouble();
+            System.out.println("Please enter the expected interest rate amount(format e.g., 7.625% = 0.07625): ");
+            double expectedInterestRate = scanner.nextDouble();
 
-            System.out.println("Please enter how long the deposit will be for(years): ");
-            double yearsC2 = scanner.nextDouble();
+            System.out.println("Please enter the years to payout (years): ");
+            double yearsC3 = scanner.nextDouble();
 
-            double futureValue;
-            double totalInterestC2;
-            futureValue = principalC2 * Math.pow(1+(annualInterestRateC2/365),365 * yearsC2);
+            double presentValue;
 
-            totalInterestC2 = futureValue - principalC2;
+            presentValue = monthlyPayoutAmount * ((1-(Math.pow(1+expectedInterestRate,-yearsC3*12)))/(expectedInterestRate/12));
 
-            System.out.println("The future value is: " + futureValue);
-            System.out.println("Total interest earned is: " + totalInterestC2);
+            System.out.println("The the present value of that annuity: " + presentValue);
+
             break;
 
 
